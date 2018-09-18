@@ -254,7 +254,7 @@ var ProductDeleteComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "button{\r\n    margin: 13px;\r\n  }"
+module.exports = "button{\n    margin: 13px;\n  }"
 
 /***/ }),
 
@@ -388,7 +388,7 @@ var ProductDetailGuard = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "thead{\r\n    color: #337AB7\r\n}"
+module.exports = "thead{\n    color: #337AB7\n}"
 
 /***/ }),
 
@@ -399,7 +399,7 @@ module.exports = "thead{\r\n    color: #337AB7\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='card'>\r\n    <div class='card-header'>\r\n        {{pageTitle}}\r\n    </div>\r\n    <div class='card-body'>\r\n        <div class='row'>\r\n            <div class='col-md-2'>Filter by:</div>\r\n            <div class='col-md-4'>\r\n                <input type='text'\r\n                        [(ngModel)]= 'listFilter' />\r\n            </div>\r\n            </div>\r\n            <div class='row'>\r\n                <div class='col-md-6'>\r\n                    <h4>Filtered by: {{listFilter}}</h4>\r\n                </div>\r\n            </div>\r\n            <div class='table-responsive'>\r\n                <table class='table'\r\n                    *ngIf='products && products.length'>\r\n                    <thead>\r\n                        <tr>\r\n                            <th>\r\n                                <button class='btn btn-primary'\r\n                                (click)='toggleImage()'>\r\n                                {{showImage ? 'Hide' : 'Show'}}\r\n                                     Image\r\n                                </button>\r\n                            </th>\r\n                            <th>Product</th>\r\n                            <th>Code</th>\r\n                            <th>Available</th>\r\n                            <th>Price</th>\r\n                            <th>Star Rating</th>\r\n                        </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                        <tr *ngFor='let product of filteredProducts'>\r\n                            <td>\r\n                                    <a [routerLink]=\"['/products',product.productId]\"><img *ngIf='showImage'\r\n                                    [src]='product.imageUrl'\r\n                                    [title]='product.productName'\r\n                                    [style.width.px]='imageWidth'\r\n                                    [style.margin.px]='imageMargin'></a>\r\n                            </td>\r\n                            <td><a [routerLink]=\"['/products',product.productId]\">{{product.productName}}</a></td>\r\n                            <td>{{product.productCode | lowercase | convertToSpaces: '-' }}</td>\r\n                            <td>{{product.releaseDate}}</td>\r\n                            <td>{{product.price | currency:\"&#8377;\"}}</td>\r\n                            <td><pm-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></pm-star></td>\r\n                          </tr>\r\n\r\n\r\n\r\n                    </tbody>\r\n                </table>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n    </div>\r\n"
+module.exports = "<div class='card'>\n    <div class='card-header'>\n        {{pageTitle}}\n    </div>\n    <div class='card-body'>\n        <div class='row'>\n            <div class='col-md-2'>Filter by:</div>\n            <div class='col-md-4'>\n                <input type='text'\n                        [(ngModel)]= 'listFilter' />\n            </div>\n            </div>\n            <div class='row'>\n                <div class='col-md-6'>\n                    <h4>Filtered by: {{listFilter}}</h4>\n                </div>\n            </div>\n            <div class='table-responsive'>\n                <table class='table'\n                    *ngIf='products && products.length'>\n                    <thead>\n                        <tr>\n                            <th>\n                                <button class='btn btn-primary'\n                                (click)='toggleImage()'>\n                                {{showImage ? 'Hide' : 'Show'}}\n                                     Image\n                                </button>\n                            </th>\n                            <th>Product</th>\n                            <th>Code</th>\n                            <th>Available</th>\n                            <th>Price</th>\n                            <th>Star Rating</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor='let product of filteredProducts'>\n                            <td>\n                                    <a [routerLink]=\"['/products',product.productId]\"><img *ngIf='showImage'\n                                    [src]='product.imageUrl'\n                                    [title]='product.productName'\n                                    [style.width.px]='imageWidth'\n                                    [style.margin.px]='imageMargin'></a>\n                            </td>\n                            <td><a [routerLink]=\"['/products',product.productId]\">{{product.productName}}</a></td>\n                            <td>{{product.productCode | lowercase | convertToSpaces: '-' }}</td>\n                            <td>{{product.releaseDate}}</td>\n                            <td>{{product.price | currency:\"&#8377;\"}}</td>\n                            <td><pm-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></pm-star></td>\n                          </tr>\n\n\n\n                    </tbody>\n                </table>\n            </div>\n\n\n\n\n\n\n        </div>\n    </div>\n"
 
 /***/ }),
 
@@ -748,7 +748,7 @@ var ProductService = /** @class */ (function () {
         this.http = http;
         //private productUrl = 'http://localhost/api/products/';
         //private productUrl = 'http://localhost:49951/api/products/';
-        this.productUrl = 'https://myrsawebapi.azurewebsites.net/api/products/';
+        this.productUrl = 'https://rsaazurewebapi.azurewebsites.net/api/products/';
     }
     ProductService.prototype.getProducts = function () {
         return this.http.get(this.productUrl)
@@ -987,7 +987,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\NG6\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\rsaadmin\Downloads\angular-master\angular-master\src\main.ts */"./src/main.ts");
 
 
 /***/ })
